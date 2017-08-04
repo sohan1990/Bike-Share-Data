@@ -11778,14 +11778,10 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Bay-Area-Bike-Share-Analysis">Bay Area Bike Share Analysis<a class="anchor-link" href="#Bay-Area-Bike-Share-Analysis">&#182;</a></h1><h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><blockquote><p><strong>Tip</strong>: Quoted sections like this will provide helpful instructions on how to navigate and use an iPython notebook.</p>
-</blockquote>
-<p><a href="http://www.bayareabikeshare.com/">Bay Area Bike Share</a> is a company that provides on-demand bike rentals for customers in San Francisco, Redwood City, Palo Alto, Mountain View, and San Jose. Users can unlock bikes from a variety of stations throughout each city, and return them to any station within the same city. Users pay for the service either through a yearly subscription or by purchasing 3-day or 24-hour passes. Users can make an unlimited number of trips, with trips under thirty minutes in length having no additional charge; longer trips will incur overtime fees.</p>
+<h1 id="Bay-Area-Bike-Share-Analysis">Bay Area Bike Share Analysis<a class="anchor-link" href="#Bay-Area-Bike-Share-Analysis">&#182;</a></h1><h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p><a href="http://www.bayareabikeshare.com/">Bay Area Bike Share</a> is a company that provides on-demand bike rentals for customers in San Francisco, Redwood City, Palo Alto, Mountain View, and San Jose. Users can unlock bikes from a variety of stations throughout each city, and return them to any station within the same city. Users pay for the service either through a yearly subscription or by purchasing 3-day or 24-hour passes. Users can make an unlimited number of trips, with trips under thirty minutes in length having no additional charge; longer trips will incur overtime fees.</p>
 <p>In this project, you will put yourself in the shoes of a data analyst performing an exploratory analysis on the data. You will take a look at two of the major parts of the data analysis process: data wrangling and exploratory data analysis. But before you even start looking at data, think about some questions you might want to understand about the bike share data. Consider, for example, if you were working for Bay Area Bike Share: what kinds of information would you want to know about in order to make smarter business decisions? Or you might think about if you were a user of the bike share service. What factors might influence how you would want to use the service?</p>
-<p><strong>Question 1</strong>: Write at least two questions you think could be answered by data.</p>
-<p><strong>Answer</strong>: Which stations encounter the most traffic? Are there enough bikes in those stations to cater to all customers? Are there any locations that face a continuos outflow and locations that have continuos inflow of bikes? What is the contingency to return bikes to some stations that have none left while there are other stations that have more bikes than the traffic requires? Which time periods show an increase/decrease of ridership through weeks and months and holidays, etc. Which demographic chooses to travel by bikes rather than other forms of transportation? How can more of these people be converted into customers?</p>
-<blockquote><p><strong>Tip</strong>: If you double click on this cell, you will see the text change so that all of the formatting is removed. This allows you to edit this block of text. This block of text is written using <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a>, which is a way to format text using headers, links, italics, and many other options. You will learn more about Markdown later in the Nanodegree Program. Hit <strong>Shift</strong> + <strong>Enter</strong> or <strong>Shift</strong> + <strong>Return</strong>.</p>
-</blockquote>
+<p><strong>Question 1</strong>: What are some of the questions that we want to find answers to through this Data Analysis?</p>
+<p>Which stations encounter the most traffic? Are there enough bikes in those stations to cater to all customers? Are there any locations that face a continuos outflow and locations that have continuos inflow of bikes? What is the contingency to return bikes to some stations that have none left while there are other stations that have more bikes than the traffic requires? Which time periods show an increase/decrease of ridership through weeks and months and holidays, etc. Which demographic chooses to travel by bikes rather than other forms of transportation? How can more of these people be converted into customers?</p>
 
 </div>
 </div>
@@ -11813,8 +11809,6 @@ div#notebook {
 <p>When dealing with a lot of data, it can be useful to start by working with only a sample of the data. This way, it will be much easier to check that our data wrangling steps are working since our code will take less time to complete. Once we are satisfied with the way things are working, we can then set things up to work on the dataset as a whole.</p>
 <p>Since the bulk of the data is contained in the trip information, we should target looking at a subset of the trip data to help us get our bearings. You'll start by looking at only the first month of the bike trip data, from 2013-08-29 to 2013-09-30. The code below will take the data from the first half of the first year, then write the first month's worth of data to an output file. This code exploits the fact that the data is sorted by date (though it should be noted that the first two days are sorted by trip time, rather than being completely chronological).</p>
 <p>First, load all of the packages and functions that you'll be using in your analysis by running the first code cell below. Then, run the second code cell to read a subset of the first trip data file, and write a new file containing just the subset we are initially interested in.</p>
-<blockquote><p><strong>Tip</strong>: You can run a code cell like you formatted Markdown cells by clicking on the cell and using the keyboard shortcut <strong>Shift</strong> + <strong>Enter</strong> or <strong>Shift</strong> + <strong>Return</strong>. Alternatively, a code cell can be executed using the <strong>Play</strong> button in the toolbar after selecting it. While the cell is running, you will see an asterisk in the message to the left of the cell, i.e. <code>In [*]:</code>. The asterisk will change into a number to show that execution has completed, e.g. <code>In [1]</code>. If there is output, it will show up as <code>Out [1]:</code>, with an appropriate number to match the "In" number.</p>
-</blockquote>
 
 </div>
 </div>
@@ -13254,7 +13248,7 @@ The median trip duration is 7.43 minutes.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Visual adjustments like this might be small, but they can go a long way in helping you understand the data and convey your findings to others.</p>
-<h2 id="Performing-Your-Own-Analysis">Performing Your Own Analysis<a class="anchor-link" href="#Performing-Your-Own-Analysis">&#182;</a></h2><p>Now that you've done some exploration on a small sample of the dataset, it's time to go ahead and put together all of the data in a single file and see what trends you can find. The code below will use the same <code>summarise_data()</code> function as before to process data. After running the cell below, you'll have processed all the data into a single data file. Note that the function will not display any output while it runs, and this can take a while to complete since you have much more data than the sample you worked with above.</p>
+<h2 id="Performing-Our-Own-Analysis">Performing Our Own Analysis<a class="anchor-link" href="#Performing-Our-Own-Analysis">&#182;</a></h2><p>Now that you've done some exploration on a small sample of the dataset, it's time to go ahead and put together all of the data in a single file and see what trends you can find. The code below will use the same <code>summarise_data()</code> function as before to process data. After running the cell below, you'll have processed all the data into a single data file. Note that the function will not display any output while it runs, and this can take a while to complete since you have much more data than the sample you worked with above.</p>
 
 </div>
 </div>
@@ -14448,15 +14442,24 @@ And as predicted, we do find that the number of trips on the weekends are almost
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conclusions">Conclusions<a class="anchor-link" href="#Conclusions">&#182;</a></h2><p>Congratulations on completing the project! This is only a sampling of the data analysis process: from generating questions, wrangling the data, and to exploring the data. Normally, at this point in the data analysis process, you might want to draw conclusions about our data by performing a statistical test or fitting the data to a model for making predictions. There are also a lot of potential analyses that could be performed on the data which are not possible with only the code given. Instead of just looking at number of trips on the outcome axis, you could see what features affect things like trip duration. We also haven't looked at how the weather data ties into bike usage.</p>
-<p><strong>Question 6</strong>: Think of a topic or field of interest where you would like to be able to apply the techniques of data science. What would you like to be able to learn from your chosen subject?</p>
+<h2 id="Conclusions">Conclusions<a class="anchor-link" href="#Conclusions">&#182;</a></h2><p><strong>Question 6</strong>: Think of a topic or field of interest where you would like to be able to apply the techniques of data science. What would you like to be able to learn from your chosen subject?</p>
 <p><strong>Answer</strong>: I am intrigued by human behavior and how their online interactions develop over time. I would be really interested in looking at data from social networking sites to recognize trends or patterns in peoples actions and reactions.</p>
-<blockquote><p><strong>Tip</strong>: If we want to share the results of our analysis with others, we aren't limited to giving them a copy of the jupyter Notebook (.ipynb) file. We can also export the Notebook output in a form that can be opened even for those without Python installed. From the <strong>File</strong> menu in the upper left, go to the <strong>Download as</strong> submenu. You can then choose a different format that can be viewed more generally, such as HTML (.html) or
-PDF (.pdf). You may need additional packages or software to perform these exports.</p>
-</blockquote>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
